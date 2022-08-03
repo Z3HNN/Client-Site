@@ -127,7 +127,7 @@ nav{
 }
 
 .logo{
-  width: 96px;
+  width: 140px;
   -webkit-filter: brightness(100%);
   transition: all 300ms ease;
 }
@@ -152,6 +152,10 @@ nav{
   box-shadow: 2px 2px 6px black;
   background: #fffafa98;
   color: rgb(0, 0, 0);
+}
+
+.menu-wrap{
+  display: none;
 }
 
 /* Company Description */
@@ -460,6 +464,7 @@ flex-direction: column;
 
 
 
+
 /* responsiveness */
 @media(max-width:570px){
   body{
@@ -467,6 +472,190 @@ flex-direction: column;
     background-position-x:50% ;
     background-size:3000px;
   }
+
+  .nav__link--link{
+    display: none;
+  }
+
+  #estimate__btn{
+    display: none;
+  }
+
+  .logo-big{
+    margin-right: 250px;
+  }
+
+
+  .menu-wrap {
+    display: block;
+    position: fixed;
+    top: 32px;
+    right: 32px;
+    z-index: 1;
+  }
+  
+  .menu-wrap .toggler {
+    position: absolute;
+    top: -7px;
+    right: -16px;
+    z-index: 2;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    opacity: 0;
+  }
+  
+  .menu-wrap .hamburger {
+    position: absolute;
+    top: -7px;
+    right: -16px;
+    z-index: 1;
+    width: 70px;
+    height: 70px;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid rgba(151, 151, 151, 0.562);
+    border-radius: 9px;
+    box-shadow: 2px 8px 5px 4px rgb(0, 0, 0);
+    transition: all 300ms ease;
+  }
+
+
+  
+  /* Hamburger Line */
+  .menu-wrap .hamburger > div {
+    position: relative;
+    flex: none;
+    width: 100%;
+    height: 2px;
+    background: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+  }
+  
+  /* Hamburger Lines - Top & Bottom */
+  .menu-wrap .hamburger > div::before,
+  .menu-wrap .hamburger > div::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    width: 100%;
+    height: 2px;
+    background: inherit;
+  }
+  
+  /* Moves Line Down */
+  .menu-wrap .hamburger > div::after {
+    top: 10px;
+  }
+  
+  /* Toggler Animation */
+  .menu-wrap .toggler:checked + .hamburger > div {
+    transform: rotate(-135deg);
+  }
+  
+  /* Turns Lines Into X */
+  .menu-wrap .toggler:checked + .hamburger > div:before,
+  .menu-wrap .toggler:checked + .hamburger > div:after {
+    top: 0;
+    transform: rotate(-90deg);
+  }
+  
+  /* Rotate On Hover When Checked */
+  .menu-wrap .toggler:checked:hover + .hamburger > div {
+    transform: rotate(-225deg);
+  }
+  
+  /* Show Menu */
+  .menu-wrap .toggler:checked ~ .menu {
+    visibility: visible;
+    height: 30%;
+  }
+
+  .menu-wrap .closer:not(:checked) ~ .menu {
+    visibility: hidden;
+  }
+  
+  .menu-wrap .toggler:checked ~ .menu > div {
+    transform: scale(1);
+    transition-duration: var(--menu-speed);
+  }
+  
+  .menu-wrap .toggler:checked ~ .menu > div > div {
+    opacity: 1;
+    transition:  opacity 0.4s ease 0.4s;
+  }
+  
+  .menu-wrap .menu {
+    position: fixed;
+    top: 120px;
+    right: 14px;
+    width: 30%;
+    height: 0%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px transparent;
+    border-radius: 9px;
+    background: transparent;
+    transition: all 300ms ease;
+    box-shadow: 0px 32px 32px 8px;
+  }
+
+  
+  .menu-wrap .menu > div {
+    border-radius: 50%;
+    width: 200vw;
+    height: 200vw;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: all 0.4s ease;
+  }
+  
+  .menu-wrap .menu > div > div {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .menu__link{
+    border: 2px solid rgba(255, 255, 255, 0.404);
+    border-radius: 9px;
+    font-size: 16px;
+    padding: 4px;
+    background: linear-gradient(rgba(255, 255, 255, 0.021), rgba(0, 0, 0, 0.767));
+  }
+  
+  .menu-wrap .menu > div > div > ul > li {
+    list-style: none;
+    color: rgba(255, 251, 251, 0.541);
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+  
+  .menu-wrap .menu > div > div > ul > li > a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.4s ease;
+  }
+
+  ul{
+    padding: 0;
+  }
+  
   
   .nav__bar--container{
     transform: scale(0.7);
@@ -507,4 +696,5 @@ flex-direction: column;
     transform: scale(1);
   }
 }
+
 

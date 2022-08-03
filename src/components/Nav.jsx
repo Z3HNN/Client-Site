@@ -27,8 +27,31 @@ const openContact = () => {
   return (
     <div>
       <nav>
+      <div class="menu-wrap">
+    <input type="checkbox" class="toggler"></input>
+    <div class="hamburger"><div></div></div>
+    <div class="menu">
+      <div>
+        <div>
+          <ul>
+            <li><a href="/" className="menu__link">Home</a></li>
+            <li><a href="#" className="menu__link" onClick={descvisible}>About</a></li>
+            <li><a href="#name" className="menu__link" onClick={openSchedule}>Services</a></li>
+            <li><a href="#contact__name" className="menu__link" onClick={openContact}>Contact</a></li>
+            <li className="nav__link">
+              <a href="#name" className="nav__link--link-main">
+                <button id="estimate__btn" onClick={openSchedule}>
+                 Schedule Estimate
+                </button>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
         <div className="nav__bar--container">
-            <a href="#" onClick={descvisible}><img src={logo} alt="" className="logo" /></a>
+            <a href="#" onClick={descvisible}><img src={logo} alt="" className="logo logo-big" /></a>
           <ul className="nav__links">
             <li className="nav__link">
               <a href="" className="nav__link--link link__hover-effect">
@@ -46,7 +69,7 @@ const openContact = () => {
               </a>
             </li>
             <li className="nav__link">
-              <a href="#name" className="nav__link--link">
+              <a href="#name" className="nav__link--link-main">
                 <button id="estimate__btn" onClick={openSchedule}>
                  Schedule Estimate
                 </button>
