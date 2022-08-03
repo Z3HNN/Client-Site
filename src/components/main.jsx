@@ -112,6 +112,14 @@ const Main = () => {
                 Schedule
               </button>
             </div>
+            <div className="company__description--conatiner-right-lower-contact">
+              <a href="#" className="close-btn--link" onClick={closeContact}>
+                <h1 className="close-btn">X</h1>
+              </a>
+              <h1 className="company__description--header-left-lower">Contact us</h1>
+              <p id="company__email" className="contact__p">contact@revtekinc.com</p>
+              <p className="contact__p">1.866.485.0473</p>
+            </div>
             <div className="company__description--conatiner-right-lower">
               <a href="#" className="close-btn--link" onClick={closeSchedule}>
                 <h1 className="close-btn">X</h1>
@@ -138,26 +146,7 @@ const Main = () => {
                 Send it over.
               </button>
             </div>
-            <div className="company__description--conatiner-right-lower-contact">
-              <a href="#" className="close-btn--link" onClick={closeContact}>
-                <h1 className="close-btn">X</h1>
-              </a>
-              <form action="">
-                <h1 className="estimate__header">Send a message</h1>
-                <h2 className="input__header">Name</h2>
-                <h4 className="input__sub-header">First and Last</h4>
-                <input
-                  id="contact__name"
-                  className="service__input"
-                  type="text"
-                />
-                <h2 className="input__header">Email</h2>
-                <input className="service__input" type="email" />
-              </form>
-              <button className="schedule__button sendit__button">
-                Submit
-              </button>
-            </div>
+            
           </div>
         </div>
       </div>

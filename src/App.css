@@ -311,20 +311,24 @@ transition: all 2000ms ease;
   display: block;
   position: static;
   position: relative;
+  height:fit-content;
   opacity: 1;
+  transition: all 600ms ease;
+  padding: 32px;
+  margin-bottom: 32px;
 }
 
 .company__description--conatiner-right-lower-contact{
-  display: none;
-  position: absolute;
+  position: relative;
+  height: 0%;
   max-width: 620px;
   background-color: rgba(0, 0, 0, 0.466);
-  padding: 32px;
+  padding: 0px;
   color: rgba(255, 255, 255, 0.61);
   box-shadow: 8px 8px 8px black;
   border-radius: 9px;
-  margin-bottom: 32px;
-  transition: all 300ms ease;
+  margin-bottom: 0px;
+  transition: all 600ms ease;
   opacity: 0;
 }
 
@@ -332,20 +336,24 @@ transition: all 2000ms ease;
   display: block;
   position: static;
   position: relative;
+  height: fit-content;
   opacity: 1;
+  padding: 32px;
+  margin-bottom: 32px;
+  transition: all 600ms ease;
 }
 
 .company__description--conatiner-right-lower{
-  display: none;
+  height: 0px;
   position: absolute;
   max-width: 620px;
   background-color: rgba(0, 0, 0, 0.466);
-  padding: 32px;
+  padding: 0px;
   color: rgba(255, 255, 255, 0.61);
   box-shadow: 8px 8px 8px black;
   border-radius: 9px;
-  margin-bottom: 32px;
-  transition: all 300ms ease;
+  margin-bottom: 0px;
+  transition: all 600ms ease;
   opacity: 0;
 }
 
@@ -359,6 +367,7 @@ transition: all 2000ms ease;
   padding: 0;
   padding-bottom: 16px;
   color: #e4e4e4;
+  cursor: default;
 }
 
 
@@ -367,15 +376,13 @@ transition: all 2000ms ease;
   list-style:circle;
   padding: 0;
   color: #e4e4e4;
+  cursor: default;
 }
 
 .list__items{
   padding-bottom: 8px;
 }
 
-.list__items:hover{
-  color: rgb(250, 253, 205);
-}
 
 .company__desription--column{
   display:flex;
@@ -412,6 +419,10 @@ transition: all 2000ms ease;
 padding-bottom: 8px;
 }
 
+
+.contact__p{
+  font-size: 20px
+}
 
 /* Footer */
 
@@ -471,6 +482,14 @@ flex-direction: column;
     background-position-y:12% ;
     background-position-x:50% ;
     background-size:3000px;
+  }
+
+  .company__description--conatiner-right-lower{
+    display: none;
+  }
+
+  .company__description--conatiner-right-lower-contact{
+    display: none;
   }
 
   .nav__link--link{
