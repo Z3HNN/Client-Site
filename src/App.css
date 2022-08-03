@@ -575,7 +575,7 @@ flex-direction: column;
   /* Show Menu */
   .menu-wrap .toggler:checked ~ .menu {
     visibility: visible;
-    height: 30%;
+    height: 40%;
   }
 
   .menu-wrap .closer:not(:checked) ~ .menu {
