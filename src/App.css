@@ -479,7 +479,7 @@ flex-direction: column;
   nav{
     margin: 0 auto;
     padding: 16px;
-    background-color: rgba(139, 133, 133, 0.664);
+    background-color: rgba(139, 133, 133, 0.295);
     box-shadow: 6px 6px 16px black;
     position: relative;
   }
