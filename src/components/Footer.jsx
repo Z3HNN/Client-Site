@@ -18,7 +18,7 @@ const Footer = () => {
                     <div className="footer__container">
                         <img src={logo} alt="" className="logo footer__logo" />
                   <ul className='footer__list'>
-                    <li><a href="#estimate__btn" className='footer__links'>Services</a></li>
+                    <li><a href="#Services" className='footer__links'>Services</a></li>
                     <li><a href="#contact__name" className='footer__links' onClick={openContact}>Contact</a></li>
                     <li><a href="#" className='footer__links' onClick={descvisible}>About</a></li>
                 </ul>  
