@@ -36,8 +36,8 @@ const openContact = () => {
           <ul>
             <li><a href="/" className="menu__link">Home</a></li>
             <li><a href="#" className="menu__link" onClick={descvisible}>About</a></li>
-            <li><a href="#Email" className="menu__link" onClick={openSchedule}>Services</a></li>
-            <li><a href="#company__email" className="menu__link" onClick={openContact}>Contact</a></li>
+            <li><a href="#forms" className="menu__link" onClick={openSchedule}>Services</a></li>
+            <li><a href="#company__info" className="menu__link" onClick={openContact}>Contact</a></li>
             <li className="nav__link">
               <a href="#name" className="nav__link--link-main">
                 <button id="estimate__btn" onClick={openSchedule}>
