@@ -479,9 +479,9 @@ flex-direction: column;
 /* responsiveness */
 @media(max-width:570px){
   body{
-    background-position-y:12% ;
+    background-position-y:1% ;
     background-position-x:50% ;
-    background-size:3000px;
+    background-size:3200px;
   }
 
   .company__description--conatiner-right-lower{
