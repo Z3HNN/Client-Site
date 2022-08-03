@@ -129,7 +129,7 @@ const Main = () => {
                 <h2 className="input__header">Name</h2>
                 <h4 className="input__sub-header">First and Last</h4>
                 <input id="name" className="service__input" type="text" />
-                <h2 className="input__header">Email</h2>
+                <h2 id="Email" className="input__header">Email</h2>
                 <input className="service__input" type="email" />
                 <h2 className="input__header">What needs to be done?</h2>
                 <h4 className="input__sub-header">
