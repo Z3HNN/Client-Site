@@ -1,4 +1,8 @@
 import React from "react";
+import emailjs from "emailjs-com"
+
+//Y1q09qst1PN7HuSZG
+//template_bcggs7h
 
 const Main = () => {
   const descblock = () => {
@@ -20,6 +24,19 @@ const Main = () => {
     document.body.classList.remove("contact__open");
     document.body.classList.remove("left__padding-remove");
   };
+
+  const contact = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_08bwqq8', 'template_42zih9x', e.target, 'Y1q09qst1PN7HuSZG')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+      e.target.reset()
+  }
+
 
   return (
     <div>
@@ -124,27 +141,28 @@ const Main = () => {
               <a href="#" className="close-btn--link" onClick={closeSchedule}>
                 <h1 className="close-btn">X</h1>
               </a>
-              <form action="">
+              <form onSubmit={contact}>
                 <h1 className="estimate__header">Lets Do it.</h1>
                 <h2 className="input__header">Name</h2>
                 <h4 className="input__sub-header">First and Last</h4>
-                <input id="name" className="service__input" type="text" />
+                <input id="name" name="user_name" className="service__input" type="text" />
                 <h2 className="input__header">Email</h2>
-                <input className="service__input" type="email" />
+                <input className="service__input" name="user_email" type="email" />
                 <h2 className="input__header">What needs to be done?</h2>
                 <h4 className="input__sub-header">
                   describe your service needs or plans
                 </h4>
                 <textarea
-                  name="service description"
+                  name="message"
                   className="service__description service__input"
                   cols="30"
                   rows="10"
                 ></textarea>
-              </form>
-              <button className="schedule__button sendit__button">
+                <button className="schedule__button sendit__button">
                 Send it over.
               </button>
+              </form>
+              
             </div>
             
           </div>
