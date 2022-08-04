@@ -145,9 +145,11 @@ const Main = () => {
                 <h1 className="estimate__header">Lets Do it.</h1>
                 <h2 className="input__header">Name</h2>
                 <h4 className="input__sub-header">First and Last</h4>
-                <input id="name" name="user_name" className="service__input" type="text" />
+                <input id="name" name="user_name" className="service__input" type="text" required/>
                 <h2 className="input__header">Email</h2>
-                <input className="service__input" name="user_email" type="email" />
+                <input className="service__input" name="user_email" type="email" required/>
+                <h2 className="input__header">Phone Number</h2>
+                <input className="service__input" name="user_number" type="number" required/>
                 <h2 className="input__header">What needs to be done?</h2>
                 <h4 className="input__sub-header">
                   describe your service needs or plans
@@ -157,6 +159,7 @@ const Main = () => {
                   className="service__description service__input"
                   cols="30"
                   rows="10"
+                  required
                 ></textarea>
                 <button className="schedule__button sendit__button">
                 Send it over.
