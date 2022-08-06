@@ -16,7 +16,8 @@ const Footer = () => {
         
             <footer>
                     <div className="footer__container">
-                        <img src={logo} alt="" className="logo footer__logo" />
+                      <a href="/"><img src={logo} alt="" className="logo footer__logo" /></a>
+                        
                   <ul className='footer__list'>
                     <li><a href="#Services" className='footer__links'>Services</a></li>
                     <li><a href="#company__info" className='footer__links' onClick={openContact}>Contact</a></li>
